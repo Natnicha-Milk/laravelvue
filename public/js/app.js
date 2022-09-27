@@ -5335,11 +5335,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -28641,13 +28636,25 @@ var render = function () {
                   attrs: { outlined: "", color: "#1483C8" },
                 },
                 [
-                  _c(
-                    "v-btn",
-                    { attrs: { icon: "", color: "#1483C8" } },
-                    [_c("v-icon", [_vm._v("mdi-heart")])],
-                    1
-                  ),
-                  _vm._v("\n\n     เข้าสู่ระบบ\n   "),
+                  _c("v-icon", { attrs: { color: "#1483C1" } }, [
+                    _vm._v("mdi-magnify"),
+                  ]),
+                  _vm._v("\n        ค้นหา\n      "),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "ma-2",
+                  attrs: { outlined: "", color: "#1483C8" },
+                },
+                [
+                  _c("v-icon", { attrs: { color: "#1483C1" } }, [
+                    _vm._v("mdi-account"),
+                  ]),
+                  _vm._v("\n        เข้าสู่ระบบ\n      "),
                 ],
                 1
               ),
