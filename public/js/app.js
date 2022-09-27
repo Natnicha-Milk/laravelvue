@@ -5334,6 +5334,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -5419,19 +5425,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((vuetify__WEBPACK_IMPORTED_MODULE_2___default()));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new (vuetify__WEBPACK_IMPORTED_MODULE_2___default())({
-  // theme: {
-  //     themes: {
-  //         light: {
-  //             primary: '#3f51b5',
-  //             secondary: '#696969',
-  //             accent: '#8c9eff',
-  //             error: '#b71c1c',
-  //         },
-  //     },
-  // },
   Vuetify: new (vuetify__WEBPACK_IMPORTED_MODULE_2___default())(),
   el: '#app'
 }));
@@ -28637,9 +28634,23 @@ var render = function () {
               _vm._v(" "),
               _c("v-spacer"),
               _vm._v(" "),
-              _c("v-btn", { attrs: { depressed: "", color: "primary" } }, [
-                _vm._v("\n     เข้าสู่ระบบ\n   "),
-              ]),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "ma-2",
+                  attrs: { outlined: "", color: "#1483C8" },
+                },
+                [
+                  _c(
+                    "v-btn",
+                    { attrs: { icon: "", color: "#1483C8" } },
+                    [_c("v-icon", [_vm._v("mdi-heart")])],
+                    1
+                  ),
+                  _vm._v("\n\n     เข้าสู่ระบบ\n   "),
+                ],
+                1
+              ),
             ],
             1
           ),

@@ -8,9 +8,15 @@
       </div>
       <v-spacer></v-spacer>
       <v-btn
-      depressed
-      color="primary"
+      class="ma-2"
+      outlined
+      color="#1483C8"
     >
+    <v-btn icon 
+     color="#1483C8">
+        <v-icon >mdi-heart</v-icon>
+      </v-btn>
+
       เข้าสู่ระบบ
     </v-btn>
      </v-app-bar>
