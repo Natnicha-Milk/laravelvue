@@ -10,9 +10,11 @@
 <body>
     <div id="app">
         <v-app app>
+            <example-component></example-component>
            <v-main>
                 <v-container> 
-                    <example-component></example-component>
+                    <example-component1></example-component1>
+                    
                 </v-container>
             </v-main>
         </v-app>

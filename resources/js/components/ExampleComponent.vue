@@ -1,23 +1,43 @@
 <template>
-  <nav>
-    <v-app>
-      <v-app-bar app color="grey lighten-5" height="110px" dark>
-        <div class="d-flex align-center">
-          <img src="../../assets/mad_logo.png" width="300" />
-        </div>
-        <v-spacer></v-spacer>
+  <v-form ref="form" v-model="valid" lazy-validation>
+    <v-text-field
+      v-model="name"
+      :counter="10"
+      :rules="nameRules"
+      label="Name"
+      required
+    ></v-text-field>
 
-        <v-btn class="ma-2" outlined color="#1483C8">
-          <v-icon color="#1483C1">mdi-magnify</v-icon>
-          ค้นหา
-        </v-btn>
-        <v-btn class="ma-2" outlined color="#1483C8">
-          <v-icon color="#1483C1">mdi-account</v-icon>
-          เข้าสู่ระบบ
-        </v-btn>
-      </v-app-bar>
-    </v-app>
-  </nav>
+    <v-text-field
+      v-model="email"
+      :rules="emailRules"
+      label="E-mail"
+      required
+    ></v-text-field>
+
+    <v-select
+      v-model="select"
+      :items="items"
+      :rules="[(v) => !!v || 'Item is required']"
+      label="Item"
+      required
+    ></v-select>
+
+    <v-checkbox
+      v-model="checkbox"
+      :rules="[(v) => !!v || 'You must agree to continue!']"
+      label="Do you agree?"
+      required
+    ></v-checkbox>
+
+    <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+      Validate
+    </v-btn>
+
+    <v-btn color="error" class="mr-4" @click="reset"> Reset Form </v-btn>
+
+    <v-btn color="warning" @click="resetValidation"> Reset Validation </v-btn>
+  </v-form>
 </template>
 
 <script>
